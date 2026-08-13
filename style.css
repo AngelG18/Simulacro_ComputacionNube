@@ -1,0 +1,678 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07140f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(3, 18, 12, 0.96);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.1);
+}
+
+.navbar {
+    max-width: 1200px;
+
+    margin: auto;
+
+    min-height: 72px;
+
+    padding: 0 24px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #7CFF9B;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+.nav-links a:hover {
+    color: #7CFF9B;
+}
+
+.menu-btn {
+    display: none;
+
+    font-size: 28px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    padding:
+        120px
+        24px
+        60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(61, 255, 141, 0.22),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #07140f,
+            #0d2b1d,
+            #07140f
+        );
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.etiqueta {
+    color: #7CFF9B;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size:
+        clamp(
+            44px,
+            8vw,
+            88px
+        );
+
+    line-height: 1.05;
+
+    margin-bottom: 24px;
+}
+
+.subtitulo {
+    font-size: 20px;
+
+    color: #d3ded8;
+
+    max-width: 700px;
+
+    margin:
+        0
+        auto
+        34px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding:
+        13px
+        26px;
+
+    background: #7CFF9B;
+
+    color: #07140f;
+
+    font-weight: bold;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.btn:hover {
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding:
+        90px
+        24px;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-title span {
+    font-size: 38px;
+}
+
+.section-title h2 {
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            48px
+        );
+
+    margin:
+        8px
+        0;
+}
+
+.section-title p {
+    color: #aebcb5;
+}
+
+
+/* =========================
+   CAMPEÓN
+========================= */
+
+.champion-card {
+    max-width: 760px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    text-align: center;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #16271f,
+            #0d1b15
+        );
+
+    border:
+        1px solid
+        rgba(124,255,155,0.28);
+
+    box-shadow:
+        0
+        20px
+        50px
+        rgba(0,0,0,0.3);
+}
+
+.flag {
+    font-size: 70px;
+}
+
+.champion-card h3 {
+    font-size: 46px;
+
+    margin:
+        10px
+        0
+        0;
+}
+
+.champion-text {
+    color: #7CFF9B;
+
+    font-weight: bold;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   RESULTADO FINAL
+========================= */
+
+.final-score {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin:
+        25px
+        0;
+}
+
+.final-score div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.final-score strong {
+    font-size: 46px;
+}
+
+.country {
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.vs {
+    font-size: 13px;
+
+    color: #07140f;
+
+    background: #7CFF9B;
+
+    padding:
+        5px
+        10px;
+
+    border-radius: 15px;
+
+    font-weight: bold;
+}
+
+.final-info {
+    color: #c7d2cc;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   DATOS
+========================= */
+
+.datos-section {
+    max-width: none;
+
+    background: #0b1c14;
+}
+
+.datos-section > * {
+    max-width: 1152px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.stat-card {
+    background: #12251b;
+
+    padding:
+        30px
+        22px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    transition: 0.25s;
+}
+
+.stat-card:hover {
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(124,255,155,0.45);
+}
+
+.stat-icon {
+    font-size: 40px;
+
+    margin-bottom: 12px;
+}
+
+.stat-card h3 {
+    font-size: 42px;
+
+    color: #7CFF9B;
+}
+
+.stat-card p {
+    color: #b6c4bd;
+}
+
+
+/* =========================
+   FIGURAS
+========================= */
+
+.players-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.player-card {
+    background: #12251b;
+
+    padding:
+        32px
+        24px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    transition: 0.25s;
+}
+
+.player-card:hover {
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(124,255,155,0.45);
+}
+
+.player-icon {
+    font-size: 42px;
+
+    margin-bottom: 12px;
+}
+
+.player-card h3 {
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+.player-card p {
+    color: #b6c4bd;
+
+    margin-bottom: 8px;
+}
+
+.player-card .award {
+    color: #7CFF9B;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   MESSI DESTACADO
+========================= */
+
+.messi-card {
+    background:
+        linear-gradient(
+            145deg,
+            #173426,
+            #0d2117
+        );
+
+    border:
+        2px solid
+        #7CFF9B;
+
+    box-shadow:
+        0
+        12px
+        30px
+        rgba(124,255,155,0.10);
+}
+
+.messi-card .player-icon {
+    font-size: 52px;
+}
+
+.messi-card h3 {
+    color: #ffffff;
+
+    font-size: 28px;
+}
+
+.messi-card .award {
+    font-size: 18px;
+}
+
+
+/* =========================
+   CIERRE
+========================= */
+
+.closing {
+    padding:
+        90px
+        24px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #163324,
+            #0b1c14
+        );
+}
+
+.closing h2 {
+    font-size: 42px;
+
+    margin-bottom: 14px;
+}
+
+.closing p {
+    max-width: 700px;
+
+    margin:
+        0
+        auto
+        28px;
+
+    color: #cad6d0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding:
+        28px
+        20px;
+
+    background: #030b07;
+
+    color: #8fa198;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 900px) {
+
+    .players-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 650px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 72px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #06120c;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding:
+            25px
+            0;
+
+        gap: 18px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .champion-card {
+        padding:
+            32px
+            18px;
+    }
+
+    .final-score {
+        gap: 14px;
+    }
+
+    .final-score div {
+        flex-direction: column;
+
+        gap: 2px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .players-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
